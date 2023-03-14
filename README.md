@@ -9,4 +9,4 @@
 </ul>
 
 <h3>Projeto 🌱:</h3>
-<p>Esse projeto foi feito usando variávies de CSS, algumas pseudo-classes e algumas animações.</p>
+<p>Esse projeto foi feito utilizando variávies de CSS, algumas pseudo-classes e algumas animações.</p>
