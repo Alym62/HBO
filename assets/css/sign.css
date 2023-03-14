@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+/* Variaveis usadas no projeto */
+
+:root {
+    --separation-bg-color: linear-gradient(0deg, transparent, #020228);
+    --btn-bg-color-zero: transparent;
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 100%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: var(--nav-bg-color);
+    position: fixed;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #000;
+}
+
+a:visited{
+    color: #000;
+}
+
+.container-header {
+    display: flex;
+}
+
+.header-img {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.btn-header {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-entrar {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-assinar {
+    width: 130px;
+    background-color: var(--tertiary-color);
+    color: #fff;
+}
+
+.btn-assinar:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+main{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/background-movies-series.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container-card{
+    width: 40%;
+    height: 300px;
+    background-image: var(--card-bg-color);
+    border-radius: 5px;
+}
+
+.container-card p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.sign-card p:nth-child(1){
+    font-size: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 250px;
+}
+
+.sign-card{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sign-card input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid var(--form-field-placeholder);
+    outline: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+input:invalid:focus{
+    border: 1px solid red;
+}
+
+.sign-card #btn-card{
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.sign-card #btn-card button:nth-child(1){
+    width: 130px;
+    height: 30px;
+    background-image: var(--btn-bg-color-gradient);
+}
+
+.sign-card #btn-card button:nth-child(2){
+    height: 30px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    opacity: .9;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: #030322;
+}
+
+.title-footer p{
+    margin-top: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: gray;
+    opacity: .6;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.title-footer p:hover{
+    color: #fff;
+}
+
+.title-footer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#footer-final{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #fff;
+    opacity: .9;
+}
+
+.icon{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon i{
+    color: #fff;
+    opacity: .5;
+}
+
+@media (max-width: 992px){
+    .container-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sign-card p:nth-child(1){
+        position: relative;
+        left: 8px;
+    }
+
+    .title-footer p{
+        display: none;
+    }
+
+    .sign-card #btn-card{
+        margin-right: 60px;
+    }
+}

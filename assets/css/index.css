@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+/* Aqui está todas as variaveis usadas no projeto */
+
+:root {
+    --separation-bg-color: linear-gradient(0deg, transparent, #020228);
+    --btn-bg-color-zero: transparent;
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 100%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Header do site */
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: var(--nav-bg-color);
+    position: fixed;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #000;
+}
+
+a:visited{
+    color: #000;
+}
+
+.container-header {
+    display: flex;
+}
+
+.header-img {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.btn-header {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-entrar {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-entrar a:hover{
+    color: #fff;
+}
+
+.btn-entrar a:visited{
+    color: #fff;
+}
+
+.btn-assinar {
+    width: 130px;
+    background-color: var(--tertiary-color);
+}
+
+.btn-assinar:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.separation{
+    margin-top: 20px;
+    width: 100%;
+    height: 1px;
+    background-image: var(--primary-color);
+    box-shadow: 40px 60px 40px 50px #020228;
+    opacity: .9;
+}
+
+/* Main do site */
+
+main {
+    width: 100%;
+    height: 2500px;
+}
+
+main .primary-section {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    animation: gradient 10s ease infinite alternate;
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-img img{
+    margin-top: 100px;
+}
+
+.line{
+    margin-top: 10px;
+    width: 50%;
+    height: 3px;
+    background-image: var(--divider-bg-color);
+}
+
+.primary-section .primary-description{
+    margin-top: 30px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+p:nth-child(1){
+    font-weight: 500;
+    font-size: 20px;
+}
+
+p:nth-child(2){
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.second-description{
+    margin-top: 40px;
+}
+
+.second-description p:nth-child(1){
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+}
+
+.second-description p:nth-child(2){
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 5px 0 0;
+}
+
+.second-description p:nth-child(4){
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.second-description p:nth-child(5){
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 8px;
+    text-align: center;
+}
+
+.second-description small{
+    font-size: 8px;
+}
+
+.second-description .btn-primary{
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    background-image: var(--btn-bg-color-gradient);
+    font-weight: 700;
+    color: #fff;
+    font-size: 11px;
+    animation: button-mixer 2.2s linear infinite;
+}
+
+.second-description #btn-primary:hover{
+    background-image: var(--btn-bg-color-zero);
+    border: 1px solid var(--secondary-color);
+    color: #000;
+}
+
+.second-section{
+    width: 100%;
+    height: 700px;
+    background-image: url('../images/background-movies-series.png');
+    background-size: cover;
+}
+
+.title-second p{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.title-second p:nth-child(1){
+    margin-top: 30px;
+}
+
+.cards-section-second{
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 90px;
+}
+
+.card-left{
+    width: 25%;
+    height: 500px;
+    border-radius: 5px;
+    background-image: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+.card-left:hover{
+    transform: scale(1.05);
+}
+
+.card-head{
+    display: flex;
+    align-items: center;
+    gap: 170px;
+    padding: 10px;
+}
+
+.card-head .type-plan{
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.card-head .price{
+    color: var(--secondary-color);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+.price small{
+    color: #fff;
+    font-size: 8px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-main{
+    padding: 30px;
+}
+
+.card-main ul, li{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-left button{
+    width: 300px;
+    height: 40px;
+    background-image: var(--btn-bg-color-gradient);
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.card-left button:hover{
+    background-image: var(--btn-bg-color-zero);
+    border: 1px solid var(--secondary-color);
+    color: #000;
+}
+
+.card-left .mobile{
+    margin-top: 60px;
+}
+
+.card-right{
+    width: 25%;
+    height: 500px;
+    border-radius: 5px;
+    background-image: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+.card-right:hover{
+    transform: scale(1.05);
+}
+
+.card-right button{
+    width: 300px;
+    height: 40px;
+    background-image: var(--btn-bg-color-gradient);
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.card-right button:hover{
+    background-image: var(--btn-bg-color-zero);
+    border: 1px solid var(--secondary-color);
+    color: #000;
+}
+
+.tree-section{
+    width: 100%;
+    height: 1200px;
+}
+
+.tree-section p{
+    margin-top: 60px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.primary-cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.second-cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.cards-tree{
+    width: 20%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.cards-tree-two{
+    width: 20%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.cards-tree:nth-child(1){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/hbo-default_0.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree:nth-child(1):hover{
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/hbo-hover_0.webp');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.cards-tree:nth-child(2){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/MAX-Default.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree:nth-child(2):hover{
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/MAX-Hover.webp');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.cards-tree:nth-child(3){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/DC_Default.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree:nth-child(3):hover{
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/DC-Hover.webp');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.cards-tree-two:nth-child(1){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/WB-Default.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree-two:nth-child(1):hover{
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/WB-Hover.webp');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.cards-tree-two:nth-child(2){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/CN-Default.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree-two:nth-child(2):hover{
+    background-image: url('https://github.com/micheleambrosio/hbomax/blob/template-desafio/assets/images/CN-Hover.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.cards-tree-two:nth-child(3){
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/UCL-Default.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.cards-tree-two:nth-child(3):hover{
+    background-image: url('https://raw.githubusercontent.com/micheleambrosio/hbomax/template-desafio/assets/images/UCL-Hover.webp');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+/* Footer do site*/
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #030322;
+}
+
+.title-footer p{
+    margin-top: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: gray;
+    opacity: .6;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.title-footer p:hover{
+    color: #fff;
+}
+
+.title-footer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#footer-final{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #fff;
+    opacity: .9;
+}
+
+.icon{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon i{
+    color: #fff;
+    opacity: .5;
+}
+
+@media (max-width: 992px){
+
+    header{
+        width: 100%;
+        height: 80px;
+    }
+
+    .header-img img{
+        position: relative;
+        left: 50px;
+    }
+
+    .container-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-section{
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .cards-section-second{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card-left{
+        height: 300px;
+        width: 80%;
+    }
+
+    .card-left button{
+        display: none;
+    }
+
+    .card-main ul, li{
+        font-size: 10px;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .card-right{
+        height: 300px;
+        width: 80%;
+    }
+
+    .card-right button{
+        display: none;
+    }
+
+    .tree-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 1000px;
+    }
+
+    .tree-section p{
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .primary-cards{
+        display: flex;
+        align-items: center;
+        width: 400px;
+        height: 200px;
+        gap: 10px;
+        margin-top: 150px;
+    }
+
+    .second-cards{
+        display: flex;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        gap: 10px;
+        margin-top: 260px;
+    }
+
+    footer{
+        height: 100px;
+    }
+
+    footer .title-footer p{
+        display: none;
+    }
+
+    footer #footer-final{
+        font-size: 6px;
+    }
+}
+
+@keyframes button-mixer {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    35% {
+        transform: rotate(-10deg);
+    }
+
+    40%, 100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+};
